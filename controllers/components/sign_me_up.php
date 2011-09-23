@@ -95,6 +95,9 @@ class SignMeUpComponent extends Object {
 					}
 				}
 			}
+			else {
+				$this->Session->setFlash(__('The user could not be saved. '. implode(' ', $this->controller->{$model}->validationErrors), true));
+			}
 		}
 	}
 
